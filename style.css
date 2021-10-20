@@ -15,11 +15,12 @@ body {
     border-radius: 0 0 0 6rem;
     width: 375px;
     height: 718px;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
   }
 
-  nav, .intro {
+  nav,
+  .intro {
     padding: 1.5rem;
   }
 
@@ -47,7 +48,7 @@ body {
   }
 
   .intro-wrapper {
-    padding: 4rem 0;  
+    padding: 4rem 0;
   }
 
   h1 {
@@ -69,7 +70,7 @@ body {
 
   .connect {
     text-transform: uppercase;
-    color: #7F8CFF;
+    color: #7f8Cff;
     font-weight: 500;
     font-size: 1rem;
     line-height: 2.5rem;
@@ -81,7 +82,8 @@ body {
   }
 
   .social {
-    margin-right: 1rem; 
+    margin-right: 1rem;
+     
     width: 1.25rem;
   }
 }
