@@ -4,16 +4,14 @@
 
 > "Portfolio" is the first big project in Microverse. Here I can show my overall HTML, CSS, Git, and GitHub knowledge for now.
 
-![screenshot](./project-screenshot.jpg)
+![screenshot](./portfolio-screenshot.jpg)
 
 ## Built With
 
 - HTML
 - CSS
 
-## Authors
-
-👤 Author
+## Author
 
 - GitHub: [@rdnrn](https://github.com/rdnrn)
 
