@@ -1,3 +1,64 @@
-@media (max-width: 375px) {
-    
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+@media (max-width: 500px) {
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #f7f7f9;
+    }
+
+    .header-wrapper {
+      background: url("white-background-m.png") 0 0 no-repeat;
+      position: absolute;
+      border-radius: 0 0 0 6rem;
+      width: 375px;
+      height: 718px;
+      left: 0px;
+      top: 0px;
+    }
+
+    header {
+      padding: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: #6070ff;
+      font-size: 1.125rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: center;
+      
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 100%;
+    }
+
+    h1 {
+      color: #172b4d;
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 52px;
+    }
+
+    .about-me-p {
+      color: #344563;
+      font-size: 1rem;
+      line-height:
+    }
 }
