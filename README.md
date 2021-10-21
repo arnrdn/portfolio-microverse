@@ -8,7 +8,7 @@
 
 ## Live Demo
 
-[Click here to see a live demo](https://raw.githack.com/rdnrn/portfolio-microverse/mobile-version-skeleton/index.html)
+[Click here to see a live demo](https://raw.githack.com/rdnrn/portfolio-microverse/main/index.html)
 
 ## Built With
 
