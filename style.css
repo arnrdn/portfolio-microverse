@@ -5,8 +5,8 @@ body {
   background-color: #f7f7f9;
 }
 
-header {
-  background: url("white-background-m.png") 0 0 no-repeat;
+.wrapper {
+  background: #ffffff  0 0 no-repeat;
   position: absolute;
   border-radius: 0 0 0 6rem;
   width: 375px;
