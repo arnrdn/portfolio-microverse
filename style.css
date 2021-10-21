@@ -45,11 +45,11 @@ nav,
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 100%;
+  height: 718px;
 }
 
 .intro-wrapper {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 h1 {
