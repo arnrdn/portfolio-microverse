@@ -27,7 +27,7 @@ a {
 
 header,
 nav,
-.intro {
+.hero {
   padding: 1.4rem 1.5rem;
 }
 
@@ -39,16 +39,16 @@ nav,
   line-height: 1.25rem;
 }
 
-.intro {
+.hero {
   background: url("header-shape-m.png") 0 0 no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 718px;
+  height: 650px;
 }
 
-.intro-wrapper {
+.hero-wrapper {
   padding: 3rem 0;
 }
 
