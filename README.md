@@ -8,7 +8,7 @@
 
 ## Live Demo
 
-[Click here to see a live demo](https://raw.githack.com/rdnrn/portfolio-microverse/mobile-grid-flexbox/index.html)
+[Click here to see a live demo](https://raw.githack.com/rdnrn/portfolio-microverse/main/index.html)
 
 ## Built With
 
