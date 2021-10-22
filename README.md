@@ -4,7 +4,7 @@
 
 > "Portfolio" is the first big project in Microverse. Here I can show my overall HTML, CSS, Git, and GitHub knowledge for now.
 
-![screenshot](./images/Project demonstration.gif)
+![screenshot](images/Project demonstration.gif)
 
 ## Live Demo
 
