@@ -42,6 +42,11 @@ nav,
   line-height: 1.25rem;
 }
 
+.hamburger {
+  width: 18;
+  height: 12;
+}
+
 .hero {
   background: url("images/header-shape-m.png") 0 0 no-repeat;
   display: flex;
@@ -93,9 +98,7 @@ h2 {
 
 .grid-container {
   display: grid;
-  display: -ms-grid;
   grid-template-columns: auto;
-  -ms-grid-columns: auto;
   background-color: #f7f7f9;
   padding: 5rem 1.5rem;
   gap: 5rem 0;
