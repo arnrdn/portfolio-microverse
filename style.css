@@ -30,8 +30,7 @@ a {
 
 header,
 nav,
-.hero,
-.about-wrapper {
+.hero {
   padding: 1.4rem 1.5rem;
 }
 
@@ -44,7 +43,7 @@ nav,
 }
 
 .hero {
-  background: url("header-shape-m.png") 0 0 no-repeat;
+  background: url("images/header-shape-m.png") 0 0 no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -202,9 +201,32 @@ button:disabled {
   background: #fff 0 0 no-repeat;
   border-radius: 0 6rem 0 0;
   width: 375px;
-  height: 718px;
+}
+
+.about-wrapper {
+  padding: 4rem 1.5rem 2rem 1.5rem;
 }
 
 .socials-icons:nth-child(2) {
-  margin: 0.5rem 1rem;
+  padding: 1.2rem 1.2rem;
+}
+
+.skills {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.skills-container {
+  margin: 2rem 0;
+}
+
+.skill{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dfe1e6;
+  padding: 1.5rem;
 }
