@@ -93,7 +93,9 @@ h2 {
 
 .grid-container {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: auto;
+  -ms-grid-columns: auto;
   background-color: #f7f7f9;
   padding: 5rem 1.5rem;
   gap: 5rem 0;
