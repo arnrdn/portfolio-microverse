@@ -16,7 +16,7 @@ a {
   background: #fff 0 0 no-repeat;
   position: absolute;
   border-radius: 0 0 0 6rem;
-  width: 414px;
+  width: 375px;
   height: 718px;
   left: 0;
   top: 0;
@@ -201,7 +201,7 @@ h3 {
 .about {
   background: #fff 0 0 no-repeat;
   border-radius: 0 6rem 0 0;
-  width: 414px;
+  width: 375px;
 }
 
 .about-wrapper {
