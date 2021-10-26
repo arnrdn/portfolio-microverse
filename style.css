@@ -230,3 +230,38 @@ button:disabled {
   border-bottom: 1px solid #dfe1e6;
   padding: 1.5rem;
 }
+
+.form-container {
+  background: #6070ff url("images/header-shape-m.png") 0 0 no-repeat;
+  border-radius: 6rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 610px;
+}
+
+.contact-wrapper {
+  padding: 6.4rem 1.5rem;
+  text-align: center;
+}
+
+.contact-content-wrapper,
+.contact-title {
+  color: #fff;
+}
+
+.contact-p {
+  font-weight: 300;
+}
+
+.form-wrapper {
+  margin-top: 2rem;
+  
+}
+
+.input-class {
+  margin-top: 1rem;
+  padding: .7rem;
+  border-radius: 0.4rem;
+}
