@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
-        crossorigin="use-credentials" rel="stylesheet">
+        rel="stylesheet">
     <title>Nana's portfolio</title>
 </head>
 
@@ -147,7 +147,7 @@
                             </ul>
                         </div>
                         <div class="work-btn-container">
-                            <button class="work-btn" type="button">
+                            <button class="btn work-btn" type="button">
                                 See Project
                             </button>
                         </div>
@@ -188,7 +188,7 @@
                             </ul>
                         </div>
                         <div class="work-btn-container">
-                            <button class="work-btn" type="button">
+                            <button class="btn work-btn" type="button">
                                 See Project
                             </button>
                         </div>
@@ -229,7 +229,7 @@
                             </ul>
                         </div>
                         <div class="work-btn-container">
-                            <button class="work-btn" type="button">
+                            <button class="btn work-btn" type="button">
                                 See Project
                             </button>
                         </div>
@@ -399,8 +399,32 @@
                     </div>
                 </div>
             </section>
+            <footer class="form-section">
+                <form class="form-container" action="https://formspree.io/f/myylaope" method="post">
+                    <div class="contact-wrapper">
+                        <div class="contact-content-wrapper">
+                            <h2 class="contact-title">
+                                Contact me
+                            </h2>
+                            <p class="contact-p">
+                                If you have an application you are interested in developing, a feature that you need
+                                built
+                                or a project that needs coding. I’d love to help with it
+                            </p>
+                        </div>
+                        <div class="form-wrapper">
+                            <input class="input-class" type="text" maxlength="30" id="name" name="user-name"
+                                placeholder="Your Name" value="Yeremias" required>
+                            <input class="input-class" type="email" id="email" name="user-email"
+                                placeholder="youremail@gmail.com" value="natajayanj14@gmail.com" required>
+                            <textarea class="input-class" name="user-msg" maxlength="500" id="msg" cols="30" rows="10"
+                                placeholder="Write your message here" required></textarea>
+                            <button class="btn submit-btn" type="submit">Get It Touch</button>
+                        </div>
+                    </div>
+                </form>
+            </footer>
         </main>
-
     </div>
 </body>
 
