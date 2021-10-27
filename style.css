@@ -114,6 +114,10 @@ h2 {
   flex-direction: column;
 }
 
+.work-img-d {
+  display: none;
+}
+
 .about-work {
   display: flex;
   flex-direction: column;
@@ -322,6 +326,49 @@ h3 {
   }
 
   .connect {
+    margin: 1rem 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 4;
+    background-color: #f7f7f9;
+    padding: 9rem 4rem;
+    gap: 6rem 0;
+  }
+
+  .work-container {
+    flex-direction: row;
+  }
+
+  .work-container:nth-last-of-type() {
+    flex-direction: row-reverse;
+  }
+
+  .work-img-m {
+    display: none;
+  }
+
+  .work-img-d {
+    display: block;
+    height: 100%;
+  }
+
+  .about-work {
+    padding: 2rem;
+  }
+
+  .about-work .btn {
+    width: 6rem;
+    margin: 1rem 0;
+  }
+
+  .work-data {
+    margin: 1rem 0;
+  }
+
+  .work-tags {
     margin: 1rem 0;
   }
  }
