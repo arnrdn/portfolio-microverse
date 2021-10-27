@@ -185,6 +185,10 @@ h3 {
   margin: 0.7rem 0;
 }
 
+.work-btn {
+  width: 7rem;
+}
+
 .btn:hover {
   color: #fff;
   background: #6070ff;
@@ -211,6 +215,17 @@ h3 {
 
 .about-wrapper {
   padding: 4rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-info-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-btn {
+  width: 10rem;
 }
 
 .socials-icons:nth-of-type(2) {
@@ -280,17 +295,17 @@ h3 {
 }
 
 .submit-btn {
-  width: 7rem;
+  width: 8rem;
 }
 
- @media (min-width: 800px) {
+ @media screen and (min-width: 800px) {
    .body {
      width: 100%;
    }
 
    .header-hero-wrapper {
-    background: #fff url("images/header-shape-desk.png") top 6rem left no-repeat;
-    border-radius: 0 0 0 7rem;
+    background: #fff url("images/header-shape-desk.png") top 6rem right no-repeat;
+    border-radius: 0 0 0 10rem;
     width: 100%;
     height: 916px;
    }
@@ -329,21 +344,30 @@ h3 {
     margin: 1rem 0;
   }
 
+  .socials-icons {
+    margin: 1rem 0;
+  }
+
   .grid-container {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 4;
     background-color: #f7f7f9;
-    padding: 9rem 4rem;
+    padding: 9rem 10rem;
     gap: 6rem 0;
   }
 
   .work-container {
+    margin: 1.5rem;
     flex-direction: row;
   }
 
-  .work-container:nth-last-of-type() {
-    flex-direction: row-reverse;
+  .work-example:hover {
+    border: 1px solid #a7aeff;
+    box-shadow: 0px 48px 48px 0px #252f8914;
+  }
+
+  .work-img-container {
+    order: 0;
   }
 
   .work-img-m {
@@ -360,7 +384,7 @@ h3 {
   }
 
   .about-work .btn {
-    width: 6rem;
+    width: 7rem;
     margin: 1rem 0;
   }
 
@@ -370,5 +394,53 @@ h3 {
 
   .work-tags {
     margin: 1rem 0;
+  }
+
+  .about-wrapper {
+    border-radius: 10rem 0 0 0;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-info-wrapper {
+    width: 43%;
+    margin: 9rem 1.5rem 9rem 8rem;
+  }
+
+  .skills-container {
+    width: 57%;
+    margin: 9rem 8rem 9rem 1.5rem;
+  }
+
+  .form-container {
+    background: #6070ff url("images/contact-shape-desk.png") center center no-repeat;
+    border-radius: 10rem 0 0 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-wrapper {
+    width: 40%;
+    margin: 4rem auto;
+  }
+
+  .contact-p {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  .form-wrapper {
+    width: 70%;
+    margin: 2rem auto;
+  }
+
+  .input-class {
+    padding: 0.9rem;
+    border-radius: 0.1rem;
+    font-size: 1.1rem;
+  }
+
+  .submit-btn {
+    margin: 1rem auto;
   }
  }
