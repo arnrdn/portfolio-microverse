@@ -15,7 +15,7 @@ a {
 .header-hero-wrapper {
   background: #fff url("images/header-shape-m.png") top 5rem right no-repeat;
   border-radius: 0 0 0 6rem;
-  width: 375px;
+  width: 100%;
   height: 718px;
 }
 
@@ -202,7 +202,7 @@ h3 {
 .about {
   background: #fff 0 0 no-repeat;
   border-radius: 0 6rem 0 0;
-  width: 375px;
+  width: 100%;
 }
 
 .about-wrapper {
