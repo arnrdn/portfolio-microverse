@@ -377,6 +377,7 @@ h3 {
   .work-container {
     padding: 1.5rem;
     flex-direction: row;
+    transition: 0.3s;
   }
 
   .work-container:nth-of-type(2n) {
@@ -386,6 +387,7 @@ h3 {
   .work-container:hover {
     border: 1px solid #a7aeff;
     box-shadow: 0 48px 48px 0 #252f8914;
+    transform: scale(1.01);
   }
 
   .work-img-m {
