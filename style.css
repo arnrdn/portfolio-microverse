@@ -308,6 +308,14 @@ h3 {
     width: 100%;
   }
 
+  .btn {
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+  }
+
   .header-hero-wrapper {
     background: #fff url("images/header-shape-desk.png") top 6rem right no-repeat;
     border-radius: 0 0 0 10rem;
@@ -326,10 +334,17 @@ h3 {
   }
 
   .nav-menu-item-link {
+    display: inline-block;
     color: #344563;
     margin: 0 1rem;
     font-weight: 500;
     font-size: 1rem;
+    transition: 0.3s;
+  }
+
+  .nav-menu-item-link:hover {
+    color: #6070ff;
+    transform: translateY(-3px);
   }
 
   .hamburger {
@@ -364,6 +379,7 @@ h3 {
   .work-container {
     padding: 1.5rem;
     flex-direction: row;
+    transition: 0.3s;
   }
 
   .work-container:nth-of-type(2n) {
@@ -373,6 +389,7 @@ h3 {
   .work-container:hover {
     border: 1px solid #a7aeff;
     box-shadow: 0 48px 48px 0 #252f8914;
+    transform: scale(1.01);
   }
 
   .work-img-m {
