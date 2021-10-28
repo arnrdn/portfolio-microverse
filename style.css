@@ -344,7 +344,7 @@ h3 {
 
   .nav-menu-item-link:hover {
     color: #6070ff;
-    transform: translateY(-3px)
+    transform: translateY(-3px);
   }
 
   .hamburger {
