@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f7f7f9;
@@ -12,14 +16,11 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
-  background: #fff 0 0 no-repeat;
-  position: absolute;
+.header-hero-wrapper {
+  background: #fff url("images/header-shape-m.png") top 5rem right no-repeat;
   border-radius: 0 0 0 6rem;
-  width: 375px;
+  width: 100%;
   height: 718px;
-  left: 0;
-  top: 0;
 }
 
 .header-wrapper {
@@ -28,7 +29,7 @@ a {
   align-items: center;
 }
 
-header,
+.header-wrapper,
 nav,
 .hero {
   padding: 1.4rem 1.5rem;
@@ -42,8 +43,11 @@ nav,
   line-height: 1.25rem;
 }
 
+.nav-menu {
+  display: none;
+}
+
 .hero {
-  background: url("images/header-shape-m.png") 0 0 no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -84,6 +88,7 @@ h2 {
 .socials-icons {
   list-style-type: none;
   display: flex;
+  align-items: center;
 }
 
 .social {
@@ -99,18 +104,19 @@ h2 {
   gap: 5rem 0;
 }
 
-.work-example {
+.work-container {
   background-color: #fff;
   border: 1px solid #dfe1e6;
   text-align: start;
   font-size: 30px;
   border-radius: 1rem;
-}
-
-.work-container {
-  margin: 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
+}
+
+.work-img-d {
+  display: none;
 }
 
 .about-work {
@@ -180,6 +186,10 @@ h3 {
   margin: 0.7rem 0;
 }
 
+.work-btn {
+  width: 7rem;
+}
+
 .btn:hover {
   color: #fff;
   background: #6070ff;
@@ -201,14 +211,25 @@ h3 {
 .about {
   background: #fff 0 0 no-repeat;
   border-radius: 0 6rem 0 0;
-  width: 375px;
+  width: 100%;
 }
 
 .about-wrapper {
   padding: 4rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.socials-icons:nth-child(2) {
+.about-info-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-btn {
+  width: 10rem;
+}
+
+.socials-icons:nth-of-type(2) {
   padding: 1.2rem 1.2rem;
 }
 
@@ -275,5 +296,158 @@ h3 {
 }
 
 .submit-btn {
-  width: 7rem;
+  width: 8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+
+  .body {
+    width: 100%;
+  }
+
+  .header-hero-wrapper {
+    background: #fff url("images/header-shape-desk.png") top 6rem right no-repeat;
+    border-radius: 0 0 0 10rem;
+    width: 100%;
+    height: 916px;
+  }
+
+  .header-wrapper {
+    margin: 0 5rem;
+    padding: 0;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-menu-item-link {
+    color: #344563;
+    margin: 0 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hero-wrapper {
+    width: 60%;
+    margin: 12rem auto;
+  }
+
+  h2 {
+    font-weight: 700;
+  }
+
+  .connect {
+    margin: 1rem 0;
+  }
+
+  .socials-icons {
+    margin: 1rem 0;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: #f7f7f9;
+    padding: 9rem 12rem;
+    gap: 6rem 0;
+  }
+
+  .work-container {
+    padding: 1.5rem;
+    flex-direction: row;
+  }
+
+  .work-container:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+
+  .work-container:hover {
+    border: 1px solid #a7aeff;
+    box-shadow: 0 48px 48px 0 #252f8914;
+  }
+
+  .work-img-m {
+    display: none;
+  }
+
+  .work-img-d {
+    display: block;
+    height: 100%;
+  }
+
+  .about-work {
+    padding: 2.5rem;
+    width: 50%;
+  }
+
+  .about-work .btn {
+    width: 7rem;
+    margin: 1rem 0;
+  }
+
+  .work-data {
+    margin: 1rem 0;
+  }
+
+  .work-tags {
+    margin: 1rem 0;
+  }
+
+  .about-wrapper {
+    border-radius: 10rem 0 0 0;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about-info-wrapper {
+    width: 43%;
+    margin: 9rem 1.5rem 9rem 8rem;
+  }
+
+  .skills-container {
+    width: 57%;
+    margin: 9rem 8rem 9rem 1.5rem;
+  }
+
+  .form-container {
+    background: #6070ff url("images/contact-shape-desk.png") center center no-repeat;
+    border-radius: 10rem 0 0 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-wrapper {
+    width: 40%;
+    margin: 3rem auto;
+  }
+
+  .contact-p {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  .form-wrapper {
+    width: 70%;
+    margin: 2rem auto;
+  }
+
+  #msg {
+    padding: 0.9rem;
+    border-radius: 0.1rem;
+    font-size: 1rem;
+    height: 8rem;
+  }
+
+  .submit-btn {
+    margin: 1rem auto;
+  }
 }
