@@ -4,11 +4,17 @@
 
 > "Portfolio" is the first big project in Microverse. Here I can show my overall HTML, CSS, Git, and GitHub knowledge for now.
 
+## Mobile Version
+
+<img src="/images/Portfolio demonstration.gif" alt="Mobile version demonstration">
+
+## Desktop version
+
 <img src="/images/desktop-screenshot.jpg" alt="Project demostration">
 
 ## Live Demo
 
-[Click here to see a live demo](https://raw.githack.com/rdnrn/portfolio-microverse/desktop/index.html)
+[Click here to see a live demo](https://raw.githack.com/rdnrn/portfolio-microverse/main/index.html)
 
 ## Built With
 
