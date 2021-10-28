@@ -8,7 +8,7 @@
 
 ## Live Demo
 
-[Click ere to see a live demo](https://raw.githack.com/rdnrn/portfolio-microverse/desktop/index.html)
+[Click here to see a live demo](https://raw.githack.com/rdnrn/portfolio-microverse/desktop/index.html)
 
 ## Built With
 
