@@ -372,7 +372,7 @@ h3 {
 
   .work-container:hover {
     border: 1px solid #a7aeff;
-    box-shadow: 0px 48px 48px 0px #252f8914;
+    box-shadow: 0 48px 48px 0 #252f8914;
   }
 
   .work-img-m {
@@ -450,4 +450,4 @@ h3 {
   .submit-btn {
     margin: 1rem auto;
   }
- }
+}
