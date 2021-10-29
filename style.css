@@ -327,11 +327,11 @@ h3 {
     margin: 0 5rem;
     padding: 0;
   }
-  
+
   .logo-link {
     display: inline-block;
     transition: 0.3s;
-  }  
+  }
 
   .logo-link:hover {
     text-shadow: 1px 2px 0 #dee1ff, 1px 5px 5px #c5caff;
