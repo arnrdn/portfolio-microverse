@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Click here to see a live demo](https://raw.githack.com/rdnrn/portfolio-microverse/main/index.html)
+[Click here to see a live demo](https://rdnrn.github.io/portfolio-microverse/)
 
 ## Built With
 
