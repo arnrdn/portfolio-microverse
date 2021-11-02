@@ -317,6 +317,10 @@ h3 {
     transform: scale(1.1);
   }
 
+  .btn:focus {
+    border: 3px solid #000;
+  }
+
   .header-hero-wrapper {
     background: #fff url("images/header-shape-desk.png") top 6rem right no-repeat;
     border-radius: 0 0 0 10rem;
