@@ -59,6 +59,7 @@ nav,
   padding: 3rem 0;
 }
 
+h1,
 h2 {
   color: #172b4d;
   font-size: 2.5rem;
@@ -237,7 +238,6 @@ h3 {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  color: #000;
   font-weight: 500;
   font-size: 1.3rem;
 }
@@ -251,6 +251,7 @@ h3 {
   justify-content: space-between;
   border-bottom: 1px solid #dfe1e6;
   padding: 1.5rem;
+  color: #000;
 }
 
 .form-section {
