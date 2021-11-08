@@ -16,6 +16,24 @@ a {
   text-decoration: none;
 }
 
+.popup .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #6070ff;
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.popup .content {
+  position: absolute;
+  top: 4rem;
+  left: 3rem;
+}
+
 .header-hero-wrapper {
   background: #fff url("images/header-shape-m.png") top 5rem right no-repeat;
   border-radius: 0 0 0 6rem;
