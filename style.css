@@ -25,13 +25,30 @@ a {
   background: #6070ff;
   mix-blend-mode: multiply;
   backdrop-filter: blur(5px);
-  z-index: 1;
 }
 
 .popup .content {
   position: absolute;
   top: 4rem;
   left: 3rem;
+  right: 0;
+}
+
+.nav-menu-modal {
+  list-style: none;
+}
+
+.nav-menu-modal a {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 55px;
+  color: #fff;
+}
+
+.popup .close-btn {
+  position: absolute;
+  right: 38px;
+  top: -2em;
 }
 
 .header-hero-wrapper {
