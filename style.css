@@ -344,6 +344,10 @@ h3 {
     width: 100%;
   }
 
+  .popup {
+    display: none;
+  }
+
   .btn {
     transition: 0.3s;
   }
