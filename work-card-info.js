@@ -38,7 +38,7 @@ const workCards = [
       year: 2015,
     },
     imageSrc: './images/work-example-d-3.png',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+    description: 'Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, South America, Europe, and Asia. Common characteristics of modern bears include large bodies with stocky legs, long snouts, small rounded ears, shaggy hair, plantigrade paws with five nonretractile claws, and short tails.',
     tags: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveDemoLink: '#',
     sourceLink: '#',
@@ -58,8 +58,8 @@ const workCards = [
   },
 ];
 
-function setCardImageSrc(imageSrc) {
-  const img = workCard.querySelector('.work-img-d-popup');
+function setImageSrc(imageSrc) {
+  const img = document.querySelector('.work-img-popup');
   img.setAttribute('src', imageSrc);
 }
 
@@ -68,24 +68,45 @@ function setCardTitle(title) {
   titleCard.textContent = title;
 };
 
-function setDescriptionTitle(description) {
-  const descriptionCard = document.querySelector('.work-p-d');
+function setDescription(description) {
+  const descriptionCard = document.querySelector('.work-popup-p');
   descriptionCard.textContent = description;
 };
 
-// nested objs
+function setCompanyName(company) {
+  const comName = document.querySelector('.work-client');
+  comName.textContent = company;
+};
+
+function setPositionName(position) {
+  const positionName = document.querySelector('.work-role');
+  positionName.textContent = position;
+};
+
+function setWorkYear(year) {
+  const workYear = document.querySelector('.work-year');
+  workYear.textContent = year;
+};
 
 for (let i = 0; i < openCardBtns.length; i += 1) {
   openCardBtns[i].addEventListener('click', () => {
     workCard.classList.toggle('invisible');
-    setCardImageSrc(workCards[i].imageSrc);
     setCardTitle(workCards[i].title);
-    setDescriptionTitle(workCards[i].description);
+    setImageSrc(workCards[i].imageSrc);
+    setCompanyName(workCards[i].subtitle.company);
+    setPositionName(workCards[i].subtitle.position);
+    setWorkYear(workCards[i].subtitle.year);
+    setDescription(workCards[i].description);
     body1.style.overflow = 'hidden';
+    for (let j = 0; j < workCards[i].tags.length; i += 1) {
+      let newTag = document.createElement('li').innerHTML = `<a href="#" class="work-tag-link">${workCards[i].tags[j]}</a>`;
+      newTag.setAttribute('class', 'work-tag');
+      document.ul.appendChild(newTag);
+    }
   });
 }
 
-for (let i = 0; i < openCardBtns.length; i += 1) {
+for (let i = 0; i < closeCardBtns.length; i += 1) {
   closeCardBtns[i].addEventListener('click', () => {
     workCard.classList.toggle('invisible');
     body1.style.overflow = 'auto';
