@@ -57,6 +57,76 @@ a {
   top: -0.9rem;
 }
 
+.work-popup .work-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  bottom: 0;
+  /* height: 100vh; */
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.work-popup .work-content {
+  background: #fff;
+  width: 90%;
+  height: auto;
+  margin: 8vh auto;
+  z-index: 2;
+  border-radius: 16px;
+  padding: 18px;
+  display: grid;
+  box-sizing: border-box;
+  grid-gap: 15px;
+  grid-template-areas:
+    'title close-button'
+    'subtitle subtitle'
+    'image image'
+    'text text'
+    'tags tags'
+    'line line'
+    'live-button source-button';
+}
+
+.work-popup .work-close-btn {
+  grid-area: close-button;
+}
+
+.work-popup .work-content h3 {
+  grid-area: title;
+}
+
+.work-popup .work-data {
+  grid-area: subtitle;
+}
+
+.work-popup .work-img-container {
+  grid-area: image;
+}
+
+.work-popup .work-p {
+  grid-area: text;
+}
+
+.work-popup .work-tags {
+  grid-area: tags;
+}
+
+.work-popup .work-line {
+  grid-area: line;
+}
+
+#live-btn {
+  grid-area: live-button;
+}
+
+#source-btn {
+  grid-area: source-button;
+}
+
 .header-hero-wrapper {
   background: #fff url("images/header-shape-m.png") top 5rem right no-repeat;
   border-radius: 0 0 0 6rem;
