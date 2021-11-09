@@ -77,7 +77,7 @@ a {
   margin: 8vh auto;
   z-index: 2;
   border-radius: 16px;
-  padding: 18px;
+  padding: 13px;
   display: grid;
   box-sizing: border-box;
   grid-gap: 15px;
@@ -93,6 +93,13 @@ a {
 
 .work-popup .work-close-btn {
   grid-area: close-button;
+  position: relative;
+}
+
+.work-close-btn svg {
+  position: absolute;
+  right: 4%;
+  top: 2%;
 }
 
 .work-popup .work-content h3 {
@@ -105,10 +112,20 @@ a {
 
 .work-popup .work-img-container {
   grid-area: image;
+  width: 100%;
 }
 
-.work-popup .work-p {
+.work-popup .work-p-m {
   grid-area: text;
+  display: block;
+}
+
+.work-popup .work-p-d {
+  display: none;
+}
+
+.work-img-m {
+  width: 100%;
 }
 
 .work-popup .work-tags {
@@ -117,6 +134,7 @@ a {
 
 .work-popup .work-line {
   grid-area: line;
+  border: 1px solid rgba(235, 236, 240, 1);
 }
 
 #live-btn {
@@ -125,6 +143,13 @@ a {
 
 #source-btn {
   grid-area: source-button;
+}
+
+#live-btn,
+#source-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-hero-wrapper {
@@ -299,7 +324,7 @@ h3 {
 }
 
 .work-btn {
-  width: 7rem;
+  width: auto;
 }
 
 .btn:hover {
@@ -434,6 +459,56 @@ h3 {
 
   .btn:focus {
     border: 3px solid #000;
+  }
+
+  .work-popup .work-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    overflow-y: scroll;
+    z-index: 1;
+  }
+  
+  .work-popup .work-content {
+    width: 80%;
+    border-radius: 16px;
+    padding: 20px;
+    grid-gap: 20px;
+    grid-template-areas:
+      'title title close-button'
+      'subtitle subtitle subtitle'
+      'image image image'
+      'text tags tags'
+      'text live-button source-button'
+      'text . .';
+  }
+
+  .work-img-d-popup {
+    width: 100%;
+  }
+
+  .work-popup .work-p-m {
+    display: none;
+  }
+  
+  .work-popup .work-p-d {
+    display: block;
+    grid-area: text;
+  }
+  
+  .work-popup .work-line {
+    display: none;
+  }
+
+  #live-btn,
+  #source-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 
   .header-hero-wrapper {
