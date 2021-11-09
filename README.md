@@ -6,7 +6,7 @@
 
 ## Mobile Version
 
-<img src="/images/portfolio-mobile.gif" alt="Mobile version demonstration">
+<img src="/images/mobile-popup-demo.gif" alt="Mobile version demonstration">
 
 ## Desktop version
 

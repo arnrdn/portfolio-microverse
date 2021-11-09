@@ -16,6 +16,47 @@ a {
   text-decoration: none;
 }
 
+.popup .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(96, 112, 255);
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.popup .content {
+  position: absolute;
+  top: 3.7rem;
+  left: 2rem;
+  right: 0;
+  z-index: 2;
+}
+
+.nav-menu-modal {
+  list-style: none;
+}
+
+.nav-menu-modal a {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3.5rem;
+  color: #fff;
+}
+
+.popup {
+  display: none;
+}
+
+.popup .close-btn {
+  position: absolute;
+  right: 2.9rem;
+  top: -0.9rem;
+}
+
 .header-hero-wrapper {
   background: #fff url("images/header-shape-m.png") top 5rem right no-repeat;
   border-radius: 0 0 0 6rem;
@@ -307,6 +348,10 @@ h3 {
 
   .body {
     width: 100%;
+  }
+
+  .popup {
+    display: none;
   }
 
   .btn {
