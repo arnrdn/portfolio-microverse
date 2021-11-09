@@ -478,7 +478,7 @@ h2 {
     width: 80%;
     border-radius: 16px;
     padding: 20px;
-    grid-gap: 20px;
+    grid-gap: 15px;
     grid-template-areas:
       'title title close-button'
       'subtitle subtitle subtitle'
@@ -486,6 +486,7 @@ h2 {
       'text tags tags'
       'text live-button source-button'
       'text . .';
+    grid-template-columns: 65% 1fr 1fr;
   }
 
   .work-img-d-popup {
@@ -507,8 +508,9 @@ h2 {
 
   #live-btn,
   #source-btn {
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 1rem;
     font-size: 0.8rem;
+    margin: 0;
   }
 
   .header-hero-wrapper {
