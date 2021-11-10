@@ -48,8 +48,13 @@ a {
 }
 
 .popup,
+.work-popup,
 .invisible {
   display: none;
+}
+
+.active {
+  display: block;
 }
 
 .popup .close-btn {
@@ -94,6 +99,10 @@ a {
 .work-popup .work-close-btn {
   grid-area: close-button;
   position: relative;
+}
+
+.work-pointer {
+  cursor: pointer;
 }
 
 .work-close-btn svg {
@@ -583,14 +592,13 @@ h2 {
   }
 
   .work-img {
-    display: block;
     width: auto;
     height: 100%;
   }
 
   .about-work {
-    padding: 2.5rem;
-    width: 50%;
+    padding: 2.5rem 3%;
+    width: auto;
   }
 
   .about-work .btn {
