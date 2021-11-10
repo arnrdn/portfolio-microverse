@@ -3,6 +3,21 @@ const workCardContainer = document.querySelector('.grid-container');
 const workCard1 = document.querySelector('#work-container-1');
 const bodyCard = document.querySelector('body');
 
+function openCardPopup() {
+  if (workPopup.style.display === 'none') {
+    workPopup.style.display = 'block';
+  } else {
+    workPopup.style.display = 'none';
+  }
+}
+
+function closeCardPopup() {
+  if (workPopup.style.display === 'block') {
+    workPopup.style.display = 'none';
+  }
+  bodyCard.style.overflow = 'auto';
+}
+
 const workCards = [
   {
     title: 'Tonic',
@@ -86,15 +101,6 @@ for (let i = 0; i < workCards.length; i += 1) {
   }
   tag.remove();
 
-  // set open button
-  function openCardPopup() {
-    if (workPopup.style.display === 'none') {
-      workPopup.style.display = 'block';
-    } else {
-      workPopup.style.display = 'none';
-    }
-  }
-
   // popup
   const openBtn = workCardCopy.querySelector('.work-btn');
   openBtn.addEventListener('click', () => {
@@ -103,7 +109,7 @@ for (let i = 0; i < workCards.length; i += 1) {
     cardImg.forEach((cardImg) => {
       cardImg.setAttribute('src', workCards[i].imageSrc);
     });
-    //title
+    // title
     const cardTitle = workPopup.querySelector('.work-popup h3');
     cardTitle.innerText = workCards[i].title;
     // company name
@@ -131,15 +137,7 @@ for (let i = 0; i < workCards.length; i += 1) {
     bodyCard.style.overflow = 'hidden';
 
     openCardPopup();
-
   });
-
-  function closeCardPopup() {
-    if (workPopup.style.display === 'block') {
-      workPopup.style.display = 'none';
-    }
-    bodyCard.style.overflow = 'auto';
-  }
 
   const closeCardBtn = document.querySelector('.work-close-btn');
   closeCardBtn.addEventListener('click', closeCardPopup);
