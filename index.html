@@ -417,8 +417,10 @@
           <div class="form-wrapper">
             <input class="input-class" type="text" maxlength="30" id="name" name="user-name" placeholder="Your Name"
               value="Yeremias" required>
-            <input class="input-class" type="email" id="email" name="user-email" placeholder="youremail@gmail.com"
-              value="natajayanj14@gmail.com" required>
+            <input class="input-class"
+              pattern="^(?=.{1,64}@)[a-z0-9_-]+(\\.[a-z0-9_-]+)*@[^-][a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,})$"
+              type="text" id="email" name="user-email" placeholder="youremail@gmail.com" value="natajayanj14@gmail.com"
+              required>
             <textarea class="input-class" name="user-msg" maxlength="500" id="msg" cols="30" rows="10"
               placeholder="Write your message here" required></textarea>
             <button class="btn submit-btn" type="submit">Get In Touch</button>
@@ -427,7 +429,7 @@
       </form>
     </footer>
   </div>
-
+  <script src="./js/email-validation.js"></script>
   <script src="./js/popup-menu.js"></script>
   <script src="./js/work-card-info.js"></script>
 </body>
