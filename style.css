@@ -47,14 +47,142 @@ a {
   color: #fff;
 }
 
-.popup {
+.popup,
+.work-popup,
+.invisible {
   display: none;
+}
+
+.active {
+  display: block;
 }
 
 .popup .close-btn {
   position: absolute;
   right: 2.9rem;
   top: -0.9rem;
+}
+
+.work-popup .work-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.work-popup .work-content {
+  background: #fff;
+  width: 90%;
+  height: auto;
+  margin: 8vh auto;
+  z-index: 2;
+  border-radius: 16px;
+  padding: 13px;
+  display: grid;
+  box-sizing: border-box;
+  grid-gap: 15px;
+  grid-template-areas:
+    'title close-button'
+    'subtitle subtitle'
+    'image image'
+    'text text'
+    'tags tags'
+    'line line'
+    'live-button source-button';
+}
+
+.work-popup .work-close-btn {
+  grid-area: close-button;
+  position: relative;
+}
+
+.work-pointer {
+  cursor: pointer;
+}
+
+.work-close-btn svg {
+  position: absolute;
+  right: 4%;
+  top: 2%;
+}
+
+h3 {
+  color: #172b4d;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.work-popup .work-content h3 {
+  grid-area: title;
+}
+
+.work-data {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.work-popup .work-data {
+  grid-area: subtitle;
+}
+
+.work-img-popup {
+  width: 100%;
+}
+
+.work-popup .work-img-container {
+  grid-area: image;
+  width: 100%;
+}
+
+.work-popup .work-popup-p {
+  grid-area: text;
+}
+
+.work-img {
+  width: 100%;
+}
+
+.work-tags {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work-popup .work-tags {
+  grid-area: tags;
+}
+
+.work-popup .work-line {
+  grid-area: line;
+  border: 1px solid rgba(235, 236, 240, 1);
+}
+
+#live-btn {
+  grid-area: live-button;
+}
+
+#source-btn {
+  grid-area: source-button;
+}
+
+#live-btn,
+#source-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#live-btn:hover,
+#source-btn:hover {
+  color: #fff;
 }
 
 .header-hero-wrapper {
@@ -157,28 +285,10 @@ h2 {
   flex-direction: column;
 }
 
-.work-img-d {
-  display: none;
-}
-
 .about-work {
   display: flex;
   flex-direction: column;
   margin: 0.8rem 0;
-}
-
-h3 {
-  color: #172b4d;
-  font-weight: bold;
-  font-size: 2rem;
-}
-
-.work-data {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin: 0.5rem 0;
 }
 
 .work-dot {
@@ -199,11 +309,6 @@ h3 {
   color: #344563;
   font-weight: 400;
   font-size: 1rem;
-}
-
-.work-tags {
-  list-style-type: none;
-  display: flex;
 }
 
 .work-tag {
@@ -229,7 +334,7 @@ h3 {
 }
 
 .work-btn {
-  width: 7rem;
+  width: auto;
 }
 
 .btn:hover {
@@ -341,7 +446,7 @@ h3 {
   width: 8rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: 17px;
   }
@@ -364,6 +469,45 @@ h3 {
 
   .btn:focus {
     border: 3px solid #000;
+  }
+
+  .work-popup .work-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    overflow-y: scroll;
+    z-index: 1;
+  }
+
+  .work-popup .work-content {
+    width: 80%;
+    border-radius: 16px;
+    padding: 20px;
+    grid-gap: 15px;
+    grid-template-areas:
+      'title title close-button'
+      'subtitle subtitle subtitle'
+      'image image image'
+      'text tags tags'
+      'text live-button source-button'
+      'text . .';
+    grid-template-columns: 65% 1fr 1fr;
+  }
+
+  .work-popup .work-line {
+    display: none;
+  }
+
+  #live-btn,
+  #source-btn {
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+    margin: 0;
   }
 
   .header-hero-wrapper {
@@ -433,7 +577,7 @@ h3 {
     display: grid;
     grid-template-columns: auto;
     background-color: #f7f7f9;
-    padding: 9rem 12rem;
+    padding: 9rem 8%;
     gap: 6rem 0;
   }
 
@@ -453,18 +597,14 @@ h3 {
     transform: scale(1.01);
   }
 
-  .work-img-m {
-    display: none;
-  }
-
-  .work-img-d {
-    display: block;
+  .work-img {
+    width: auto;
     height: 100%;
   }
 
   .about-work {
-    padding: 2.5rem;
-    width: 50%;
+    padding: 2.5rem 3%;
+    width: auto;
   }
 
   .about-work .btn {
