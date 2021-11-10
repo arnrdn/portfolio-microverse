@@ -1,6 +1,6 @@
 const inputName = document.querySelector('#name');
 const inputEmail = document.querySelector('#email');
-const inputMessage = document.querySelector('#msg');
+const textArea = inputEmail.parentNode.querySelector('textarea');
 
 function storageAvailable(type = 'localStorage') {
   let storage;
@@ -26,12 +26,19 @@ function storageAvailable(type = 'localStorage') {
   }
 }
 
+if (storageAvailable() && localStorage.getItem('formData')) {
+  const formData = JSON.parse(localStorage.getItem('formData'));
+  inputName.value = formData.name;
+  inputEmail.value = formData.email;
+  textArea.innerText = formData.msg;
+}
+
 function populateStorage() {
   if (storageAvailable()) {
     const formData = {
       name: inputName.value,
       email: inputEmail.value,
-      message: inputMessage.value,
+      msg: textArea.innerText,
     };
     const formDataStr = JSON.stringify(formData);
     localStorage.setItem('formData', formDataStr);
@@ -40,4 +47,4 @@ function populateStorage() {
 
 inputName.onchange = populateStorage;
 inputEmail.onchange = populateStorage;
-inputMessage.onchange = populateStorage;
+textArea.onchange = populateStorage;
