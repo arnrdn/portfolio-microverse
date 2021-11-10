@@ -30,7 +30,7 @@ if (storageAvailable() && localStorage.getItem('formData')) {
   const formData = JSON.parse(localStorage.getItem('formData'));
   inputName.value = formData.name;
   inputEmail.value = formData.email;
-  textArea.innerText = formData.msg;
+  textArea.value = formData.msg;
 }
 
 function populateStorage() {
@@ -38,7 +38,7 @@ function populateStorage() {
     const formData = {
       name: inputName.value,
       email: inputEmail.value,
-      msg: textArea.innerText,
+      msg: textArea.value,
     };
     const formDataStr = JSON.stringify(formData);
     localStorage.setItem('formData', formDataStr);
@@ -48,3 +48,6 @@ function populateStorage() {
 inputName.onchange = populateStorage;
 inputEmail.onchange = populateStorage;
 textArea.onchange = populateStorage;
+inputName.onkeyup = populateStorage;
+inputEmail.onkeyup = populateStorage;
+textArea.onkeyup = populateStorage;
