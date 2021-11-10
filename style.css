@@ -153,6 +153,7 @@ h3 {
 .work-tags {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .work-popup .work-tags {

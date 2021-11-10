@@ -29,8 +29,8 @@ const workCards = [
     imageSrc: './images/work-example-d-1.png',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     tags: ['html', 'css', 'javaScript'],
-    liveDemoLink: '#',
-    sourceLink: '#',
+    liveDemoLink: 'https://rdnrn.github.io/portfolio-microverse/',
+    sourceLink: 'https://github.com/rdnrn/portfolio-microverse',
   },
   {
     title: 'Multi-Post Stories',
@@ -42,8 +42,8 @@ const workCards = [
     imageSrc: './images/work-example-d-2.png',
     description: 'This is a good description. A great description even. But sometimes we need to stop. Maybe, make some tea, or coffe, what you prefer. Do you know, that you need only three steps in your skincare routine? First one is a cleanser, then moisturizer, and, finally, sunscreen! Sunscreen is really important for our skin, because it is creating a protecting barrier on our skin and works as a prevention of skin cancer! That is why you need it in your skincare routine! And now, welcome some beautiful filler words to make this desription even longer, so then I can see if my code is working or not. By the way, have a great day!',
     tags: ['html', 'Ruby on rails', 'css', 'javaScript'],
-    liveDemoLink: '#',
-    sourceLink: '#',
+    liveDemoLink: 'https://rdnrn.github.io/portfolio-microverse/',
+    sourceLink: 'https://github.com/rdnrn/portfolio-microverse',
   },
   {
     title: 'Facebook 360',
@@ -55,8 +55,8 @@ const workCards = [
     imageSrc: './images/work-example-d-3.png',
     description: 'Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, South America, Europe, and Asia. Common characteristics of modern bears include large bodies with stocky legs, long snouts, small rounded ears, shaggy hair, plantigrade paws with five nonretractile claws, and short tails.',
     tags: ['Ruby on rails', 'html', 'css', 'javaScript'],
-    liveDemoLink: '#',
-    sourceLink: '#',
+    liveDemoLink: 'https://rdnrn.github.io/portfolio-microverse/',
+    sourceLink: 'https://github.com/rdnrn/portfolio-microverse',
   },
   {
     title: 'Uber Navigation',
@@ -68,8 +68,8 @@ const workCards = [
     imageSrc: './images/work-example-d-4.png',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     tags: ['html', 'css', 'javaScript', 'Ruby on rails'],
-    liveDemoLink: '#',
-    sourceLink: '#',
+    liveDemoLink: 'https://rdnrn.github.io/portfolio-microverse/',
+    sourceLink: 'https://github.com/rdnrn/portfolio-microverse',
   },
 ];
 
@@ -124,9 +124,16 @@ for (let i = 0; i < workCards.length; i += 1) {
     // description
     const descriptionPp = workPopup.querySelector('.work-popup p');
     descriptionPp.innerText = workCards[i].description;
+    // live demo
+    const liveLink = workPopup.querySelector('#live-btn');
+    liveLink.addEventListener('click', () => window.open(workCards[i].liveDemoLink));
+    // source demo
+    const sourceLink = workPopup.querySelector('#source-btn');
+    sourceLink.addEventListener('click', () => window.open(workCards[i].sourceLink));
     // tags
     const tagPp = workPopup.querySelector('.work-popup .work-tag');
     const tagContainerPp = workPopup.querySelector('.work-popup .work-tags');
+    tagContainerPp.innerHTML = "";
     for (let j = 0; j < workCards[i].tags.length; j += 1) {
       const tagCopyPp = tagPp.cloneNode(true);
       tagCopyPp.innerText = workCards[i].tags[j];
