@@ -1,3 +1,7 @@
+const inputName = document.querySelector('#name');
+const inputEmail = document.querySelector('#email');
+const inputMessage = document.querySelector('#msg');
+
 function storageAvailable(type = 'localStorage') {
   let storage;
   try {
@@ -22,8 +26,18 @@ function storageAvailable(type = 'localStorage') {
   }
 }
 
-if (storageAvailable()) {
-  // Yippee! We can use localStorage awesomeness
-} else {
-  // Too bad, no localStorage for us
+function populateStorage() {
+  if (storageAvailable()) {
+    const formData = {
+      name: inputName.value,
+      email: inputEmail.value,
+      message: inputMessage.value,
+    };
+    const formDataStr = JSON.stringify(formData);
+    localStorage.setItem('formData', formDataStr);
+  }
 }
+
+inputName.onchange = populateStorage;
+inputEmail.onchange = populateStorage;
+inputMessage.onchange = populateStorage;
