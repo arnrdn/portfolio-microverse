@@ -133,7 +133,7 @@ for (let i = 0; i < workCards.length; i += 1) {
     // tags
     const tagPp = workPopup.querySelector('.work-popup .work-tag');
     const tagContainerPp = workPopup.querySelector('.work-popup .work-tags');
-    tagContainerPp.innerHTML = "";
+    tagContainerPp.innerHTML = '';
     for (let j = 0; j < workCards[i].tags.length; j += 1) {
       const tagCopyPp = tagPp.cloneNode(true);
       tagCopyPp.innerText = workCards[i].tags[j];
