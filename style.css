@@ -179,6 +179,11 @@ h3 {
   align-items: center;
 }
 
+#live-btn:hover,
+#source-btn:hover {
+  color: #fff;
+}
+
 .header-hero-wrapper {
   background: #fff url("images/header-shape-m.png") top 5rem right no-repeat;
   border-radius: 0 0 0 6rem;
@@ -440,7 +445,7 @@ h2 {
   width: 8rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: 17px;
   }
@@ -571,7 +576,7 @@ h2 {
     display: grid;
     grid-template-columns: auto;
     background-color: #f7f7f9;
-    padding: 9rem 12rem;
+    padding: 9rem 8%;
     gap: 6rem 0;
   }
 

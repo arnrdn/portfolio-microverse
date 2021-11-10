@@ -1,9 +1,9 @@
 const openCardBtn = document.querySelector('#portfolio .work-btn');
-const workCard = document.querySelector('.work-overlay');
-const body1 = document.querySelector('body');
-const closeCardBtns = document.querySelectorAll('.work-close-btn');
+const workPopup = document.querySelector('.work-popup');
+const workOverlay = document.querySelector('.work-overlay');
+const bodyCard = document.querySelector('body');
+const workCardContainer = document.querySelector('.grid-container');
 const workCard1 = document.querySelector('#work-container-1');
-const workCardContainer = document.querySelector('#portfolio');
 
 const workCards = [
   {
@@ -13,7 +13,7 @@ const workCards = [
       position: 'Back End Dev',
       year: 2015,
     },
-    imageSrc: './images/card-desktop-modal.png',
+    imageSrc: './images/work-example-d-1.png',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
     tags: ['html', 'css', 'javaScript'],
     liveDemoLink: '#',
@@ -27,7 +27,7 @@ const workCards = [
       year: 2015,
     },
     imageSrc: './images/work-example-d-2.png',
-    description: 'This is a good description. A great description even. But sometimes we need to stop. Maybe, make some tea, or coffe, what you prefer. Do you know, that you need only three steps in your skincare routine? First one is a cleanser, then moisturizer, and, finally, sunscreen! Sunscreen is really important for our skin, because it is creating a protecting barrier on our skin and works as a prevention of skin cancer! That is why you need it in your skincare routine! And now, welcome some beautiful filler words to make this desription even longer, so then I can see i my code is working or not. By the way, have a great day!',
+    description: 'This is a good description. A great description even. But sometimes we need to stop. Maybe, make some tea, or coffe, what you prefer. Do you know, that you need only three steps in your skincare routine? First one is a cleanser, then moisturizer, and, finally, sunscreen! Sunscreen is really important for our skin, because it is creating a protecting barrier on our skin and works as a prevention of skin cancer! That is why you need it in your skincare routine! And now, welcome some beautiful filler words to make this desription even longer, so then I can see if my code is working or not. By the way, have a great day!',
     tags: ['html', 'Ruby on rails', 'css', 'javaScript'],
     liveDemoLink: '#',
     sourceLink: '#',
@@ -41,7 +41,7 @@ const workCards = [
     },
     imageSrc: './images/work-example-d-3.png',
     description: 'Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, South America, Europe, and Asia. Common characteristics of modern bears include large bodies with stocky legs, long snouts, small rounded ears, shaggy hair, plantigrade paws with five nonretractile claws, and short tails.',
-    tags: ['html', 'Ruby on rails', 'css', 'javaScript'],
+    tags: ['Ruby on rails', 'html', 'css', 'javaScript'],
     liveDemoLink: '#',
     sourceLink: '#',
   },
@@ -60,91 +60,92 @@ const workCards = [
   },
 ];
 
-
-
-function setImageSrc(imageSrc) {
-  const img = workCardContainer.querySelector('.work-img');
-  img.setAttribute('src', imageSrc);
-}
-
-function setDescription(description) {
-  const descriptionCard = workCardCopy.querySelector('.work-popup-p');
-  descriptionCard.textContent = description;
-};
-
-function setCompanyName(company) {
-  const comName = workCardCopy.querySelector('.work-client');
-  comName.textContent = company;
-};
-
-function setPositionName(position) {
-  const positionName = workCardCopy.querySelector('.work-role');
-  positionName.textContent = position;
-};
-
-function setWorkYear(year) {
-  const workYear = workCardCopy.querySelector('.work-year');
-  workYear.textContent = year;
-};
-
 for (let i = 0; i < workCards.length; i += 1) {
-  // card copy
+  //  card copy
   const workCardCopy = workCard1.cloneNode(true);
-  // change the title
+  // images
+  const img = workCardCopy.querySelector('.work-img');
+  img.setAttribute('src', workCards[i].imageSrc);
+  //    change the title
   const title = workCardCopy.querySelector('h3');
   title.innerText = workCards[i].title;
-  // make the tags
-  const tag = workCardCopy.querySelector('.work-tag');
-  const tagContainer = workCardCopy.querySelector('.work-tags')
-
-  setImageSrc(workCards[i].imageSrc);
+  // company name
+  const comName = workCardCopy.querySelector('.work-client');
+  comName.innerText = workCards[i].subtitle.company;
+  // job position
+  const workRole = workCardCopy.querySelector('.work-role');
+  workRole.innerText = workCards[i].subtitle.position;
+  // year
+  const workYear = workCardCopy.querySelector('.work-year');
+  workYear.innerText = workCards[i].subtitle.year;
+  //    make the tags
+  const tag = workCardCopy.querySelector('.work-container .work-tag');
+  const tagContainer = workCardCopy.querySelector('.work-container .work-tags');
   for (let j = 0; j < workCards[i].tags.length; j += 1) {
-    console.log(workCards[i].tags[j]);
-    let tagCopy = tag.cloneNode(true);
+    const tagCopy = tag.cloneNode(true);
     tagCopy.innerText = workCards[i].tags[j];
     tagContainer.appendChild(tagCopy);
   }
+  tag.remove();
 
-  openCardBtns[i].addEventListener('click', () => {
-    workCard.classList.toggle('invisible');
-    body1.style.overflow = 'hidden';
+  // set open button
+  function openCardPopup() {
+    if (workPopup.style.display == 'none') {
+      workPopup.style.display = 'block';
+    } else {
+      workPopup.style.display = 'none';
+    }
+  }
+
+  // popup
+  const openBtn = workCardCopy.querySelector('.work-btn');
+  openBtn.addEventListener('click', () => {
+    // images
+    const cardImg = workPopup.querySelectorAll('.work-img-popup');
+    cardImg.forEach((cardImg) => {
+      cardImg.setAttribute('src', workCards[i].imageSrc);
+    });
+    //title
+    const cardTitle = workPopup.querySelector('.work-popup h3');
+    cardTitle.innerText = workCards[i].title;
+    // company name
+    const comNamePp = workPopup.querySelector('.work-popup .work-client');
+    comNamePp.innerText = workCards[i].subtitle.company;
+    // job position
+    const workRolePp = workPopup.querySelector('.work-popup .work-role');
+    workRolePp.innerText = workCards[i].subtitle.position;
+    // year
+    const workYearPp = workPopup.querySelector('.work-popup .work-year');
+    workYearPp.innerText = workCards[i].subtitle.year;
+    // description
+    const descriptionPp = workPopup.querySelector('.work-popup p');
+    descriptionPp.innerText = workCards[i].description;
+    // tags
+    const tagPp = workPopup.querySelector('.work-popup .work-tag');
+    const tagContainerPp = workPopup.querySelector('.work-popup .work-tags');
+    for (let j = 0; j < workCards[i].tags.length; j += 1) {
+      const tagCopyPp = tagPp.cloneNode(true);
+      tagCopyPp.innerText = workCards[i].tags[j];
+      tagContainerPp.appendChild(tagCopyPp);
+    }
+    tagPp.remove();
+
+    body.style.overflow = 'hidden';
+
+    openCardPopup();
+
   });
+
+  function closeCardPopup() {
+    if (workPopup.style.display == 'block') {
+      workPopup.style.display = 'none';
+    }
+    body.style.overflow = 'auto';
+  }
+
+  const closeCardBtn = document.querySelector('.work-close-btn');
+  closeCardBtn.addEventListener('click', closeCardPopup);
+
   workCardContainer.appendChild(workCardCopy);
 }
 workCard1.remove();
-
-// const seeProjectBtn = workCardCopy.querySelector('.work-btn');
-// seeProjectBtn.addEventListener('click', () => {
-//   workCard.classList.toggle('invisible');
-//   const img = workCardContainer.querySelector('.work-img');
-//   img.setAttribute('src', imageSrc);
-//   body1.style.overflow = 'hidden';
-// });
-
-
-for (let i = 0; i < openCardBtn.length; i += 1) {
-  openCardBtns[i].addEventListener('click', () => {
-    workCard.classList.toggle('invisible');
-    setCardTitle(workCards[i].title);
-    setImageSrc(workCards[i].imageSrc);
-    setCompanyName(workCards[i].subtitle.company);
-    setPositionName(workCards[i].subtitle.position);
-    setWorkYear(workCards[i].subtitle.year);
-    setDescription(workCards[i].description);
-    body1.style.overflow = 'hidden';
-    for (let j = 0; j < workCards[i].tags.length; i += 1) {
-      let newTag = document.createElement('li').innerHTML = `<a href="#" class="work-tag-link">${workCards[i].tags[j]}</a>`;
-      newTag.setAttribute('class', 'work-tag');
-      document.ul.appendChild(newTag);
-    }
-  });
-}
-
-
-
-for (let i = 0; i < closeCardBtns.length; i += 1) {
-  closeCardBtns[i].addEventListener('click', () => {
-    workCard.classList.toggle('invisible');
-    body1.style.overflow = 'auto';
-  });
-}
