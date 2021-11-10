@@ -1,9 +1,7 @@
-const openCardBtn = document.querySelector('#portfolio .work-btn');
 const workPopup = document.querySelector('.work-popup');
-const workOverlay = document.querySelector('.work-overlay');
-const bodyCard = document.querySelector('body');
 const workCardContainer = document.querySelector('.grid-container');
 const workCard1 = document.querySelector('#work-container-1');
+const bodyCard = document.querySelector('body');
 
 const workCards = [
   {
@@ -90,7 +88,7 @@ for (let i = 0; i < workCards.length; i += 1) {
 
   // set open button
   function openCardPopup() {
-    if (workPopup.style.display == 'none') {
+    if (workPopup.style.display === 'none') {
       workPopup.style.display = 'block';
     } else {
       workPopup.style.display = 'none';
@@ -130,17 +128,17 @@ for (let i = 0; i < workCards.length; i += 1) {
     }
     tagPp.remove();
 
-    body.style.overflow = 'hidden';
+    bodyCard.style.overflow = 'hidden';
 
     openCardPopup();
 
   });
 
   function closeCardPopup() {
-    if (workPopup.style.display == 'block') {
+    if (workPopup.style.display === 'block') {
       workPopup.style.display = 'none';
     }
-    body.style.overflow = 'auto';
+    bodyCard.style.overflow = 'auto';
   }
 
   const closeCardBtn = document.querySelector('.work-close-btn');
